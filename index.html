@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZeroGames Studio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Zero Games - Creando mundos inolvidables</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="Images/2.png">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>ZeroGames</h1>
-      <nav>
-        <a href="#about">Sobre Nosotros</a>
-        <a href="#games">Juegos</a>
-        <a href="#contact">Contacto</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Modo claro/oscuro -->
+    <button id="theme-toggle" aria-label="Cambiar modo"></button>
 
-  <section id="hero">
-    <div class="container">
-      <h2>Creamos juegos indie únicos</h2>
-      <p>Pasión dominicana y española fusionada en experiencias memorables.</p>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <h2>Sobre Nosotros</h2>
-      <p>ZeroGames es un estudio indie formado por un pequeño pero poderoso equipo de desarrolladores dominicanos y españoles. Creamos juegos con el corazón usando Godot Engine.</p>
-    </div>
-  </section>
-
-  <section id="games">
-    <div class="container">
-      <h2>Nuestros Juegos</h2>
-      <div class="game-list">
-        <div class="game-card">
-          <img src="images/stellar-journey.jpg" alt="Stellar Journey" />
-          <h3>Stellar Journey</h3>
-          <p>Una aventura onírica en el cielo. Actualmente en desarrollo.</p>
+    <!-- Header / Portada -->
+    <header>
+        <div class="container">
+            <a href="index.html">
+                <img src="Images/Zero.png" alt="Logo ZeroGames" class="logo-img" />
+            </a>
+            <nav>
+                <a href="#about">Sobre Nosotros</a>
+                <a href="#games">Juegos</a>
+                <a href="#news">Noticias</a>
+                <a href="#contact">Contacto</a>
+            </nav>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <section id="contact">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:contact@zerogames.dev">contact@zerogames.dev</a></p>
-      <p>Twitter/X: <a href="https://x.com/ZeroGamesStudio" target="_blank">@ZeroGamesStudio</a></p>
-    </div>
-  </section>
+    <!-- Sección Quiénes Somos -->
+    <section id="about" class="about">
+        <h2>Quiénes Somos</h2>
+        <p>Somos un estudio indie apasionado por crear experiencias de juego únicas, inmersivas y llenas de personalidad. ¡Explora nuestros juegos y únete a nuestra comunidad!</p>
+    </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 ZeroGames. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <!-- Sección Juegos -->
+    <section id="games" class="games">
+        <h2>Nuestros Juegos</h2>
+        <div class="game-list">
+            <a href="stellar.html" class="game-card">
+                <img src="assets/img/stellar.jpg" alt="Stellar Journey">
+                <h3>Stellar Journey</h3>
+                <p>
+                    Inspirado en grandes títulos como Skyward Sword, Journey y Sky: Niños de la Luz, Stellar Journey te invita a explorar un mundo ambientado en los cielos.<br>
+                    <strong>Plataformas 3D Fluidas</strong><br>
+                    <strong>Exploración No Lineal al Estilo Metroidvania</strong><br>
+                    <strong>Narrativa Ambiental y Emocional:</strong> Al igual que Journey, Stellar Journey cuenta su historia a través del propio mundo y tus interacciones con él.
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección Noticias / Dev Blog -->
+    <section id="news" class="news">
+        <h2>Noticias</h2>
+        <div class="news-item">
+            <h3>¡Lanzamiento del sitio web!</h3>
+            <span class="date">Junio 2025</span>
+            <p>¡Bienvenido a la nueva web de Zero Games! Aquí encontrarás información sobre nuestros proyectos y novedades.</p>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contact" class="contact">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <p>Twitter/X: <a href="https://x.com/ZeroGamesStudio" target="_blank">@ZeroGamesStudio</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#about">Sobre Nosotros</a>
+            <a href="#games">Juegos</a>
+            <a href="#news">Noticias</a>
+            <a href="#contact">Contacto</a>
+        </div>
+        <div class="footer-credits">
+            &copy; 2025 ZeroGames. Todos los derechos reservados.
+        </div>
+    </footer>
 </body>
 </html>
