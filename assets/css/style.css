@@ -264,3 +264,145 @@ img, .banner-img {
         width: 40px;
     }
 }
+
+/* Adaptabilidad y responsividad para todos los dispositivos */
+
+/* Estructura principal */
+body, html {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Banner responsivo */
+.banner-youtube {
+    width: 100%;
+    height: 180px;
+}
+@media (min-width: 600px) {
+    .banner-youtube { height: 220px; }
+}
+@media (min-width: 900px) {
+    .banner-youtube { height: 280px; }
+}
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Header y navegación */
+header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1rem;
+}
+nav {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+@media (min-width: 700px) {
+    header .container {
+        flex-direction: row;
+        align-items: center;
+        padding: 1.2rem 2rem;
+    }
+    nav {
+        width: auto;
+        margin-top: 0;
+        gap: 1.5rem;
+    }
+}
+
+/* Logo responsivo */
+.logo-img {
+    height: 40px;
+    width: 40px;
+}
+@media (min-width: 600px) {
+    .logo-img { height: 56px; width: 56px; }
+}
+
+/* Secciones y tarjetas */
+section {
+    padding: 2rem 0.5rem;
+    margin: 1.2rem auto;
+    max-width: 98vw;
+}
+@media (min-width: 600px) {
+    section { padding: 3rem 1.5rem; max-width: 900px; }
+}
+@media (min-width: 1100px) {
+    section { max-width: 1200px; }
+}
+
+.game-list {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+@media (min-width: 700px) {
+    .game-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+    }
+}
+.game-card {
+    width: 95vw;
+    max-width: 340px;
+}
+@media (min-width: 600px) {
+    .game-card { width: 320px; }
+}
+
+/* Texto y títulos */
+section h2, section h3 {
+    font-size: 1.5rem;
+}
+@media (min-width: 600px) {
+    section h2 { font-size: 2rem; }
+    section h3 { font-size: 1.2rem; }
+}
+
+/* Footer */
+.footer-links {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+@media (min-width: 600px) {
+    .footer-links {
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+
+/* Formularios y listas */
+.about ul, #requisitos ul {
+    padding-left: 1.2rem;
+    text-align: left;
+}
+@media (max-width: 600px) {
+    .about ul, #requisitos ul {
+        padding-left: 0.5rem;
+    }
+}
+
+/* Imágenes adaptables */
+img, .banner-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Centrado general para móviles */
+.about, .games, .news, .contact, .news-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
