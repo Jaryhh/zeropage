@@ -6,10 +6,13 @@
     <title>Zero Games - Creando mundos inolvidables</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" href="Images/3.png">
+
 </head>
 <body>
     <!-- Modo claro/oscuro -->
-    <button id="theme-toggle" aria-label="Cambiar modo"></button>
+    <button id="theme-toggle" aria-label="Cambiar modo">
+        <span id="theme-icon" style="font-size:1.3rem;">🌙</span>
+    </button>
 
     <!-- Banner estilo YouTube, colócalo justo después de <body> o antes del header -->
     <div class="banner-youtube">
@@ -48,6 +51,29 @@
         </div>
     </section>
 
+    <!-- Sección Equipo -->
+    <section id="equipo" class="about equipo-section">
+        <h2>Equipo</h2>
+        <div class="equipo-list">
+            <div class="equipo-card animated-card">
+                <img src="Images/Pic/Jaryh.jpeg" alt="Jarinsson" class="equipo-img">
+                <h3>Jarinsson Herrera (Jaryh)</h3>
+                <p>Programador Principal</p>
+            </div>
+
+            <div class="equipo-card animated-card">
+                <img src="Images/Pic/Xbilalo.png" alt="Nombre Miembro 2" class="equipo-img">
+                <h3>Bilal El Harmachi (xbilalO)</h3>
+                <p>Game Desing</p>
+            </div>
+            <div class="equipo-card animated-card">
+                <img src="Images/Pic/Daniel.png" alt="Nombre Miembro 3" class="equipo-img">
+                <h3>Daniel Peña (Dani)</h3>
+                <p>Artista 2D/3D, Escritor</p>
+            <!-- Agrega más miembros si lo deseas -->
+        </div>
+    </section>
+
     <!-- Sección Noticias / Dev Blog -->
     <section id="news" class="news">
         <div class="news-container" style="max-width: 500px; margin: 0 auto; text-align: center;">
@@ -80,5 +106,6 @@
             &copy; 2025 ZeroGames. Todos los derechos reservados.
         </div>
     </footer>
+    <script src="assets/js/theme.js"></script>
 </body>
 </html>

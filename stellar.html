@@ -8,6 +8,11 @@
     <link rel="icon" href="Images/stellar.jpg">
 </head>
 <body>
+    <!-- Botón de cambio de tema -->
+    <button id="theme-toggle" aria-label="Cambiar modo">
+        <span id="theme-icon" style="font-size:1.3rem;">🌙</span>
+    </button>
+
     <!-- Banner estilo YouTube -->
     <div class="banner-youtube">
         <img src="Images/stellar-banner.jpg" alt="Banner Stellar Journey" class="banner-img">
@@ -67,6 +72,23 @@
             </ul>
         </section>
 
+        <section id="equipo" class="about equipo-section">
+            <h2>Equipo</h2>
+            <div class="equipo-list">
+                <div class="equipo-card animated-card">
+                    <img src="Images/equipo1.png" alt="Nombre Miembro 1" class="equipo-img">
+                    <h3>Nombre Miembro 1</h3>
+                    <p>Rol en el proyecto</p>
+                </div>
+                <div class="equipo-card animated-card">
+                    <img src="Images/equipo2.png" alt="Nombre Miembro 2" class="equipo-img">
+                    <h3>Nombre Miembro 2</h3>
+                    <p>Rol en el proyecto</p>
+                </div>
+                <!-- Agrega más miembros si lo deseas -->
+            </div>
+        </section>
+
         <section id="contacto" class="contact">
             <h2>Contacto</h2>
             <div class="contact-info">
@@ -86,5 +108,6 @@
             &copy; 2025 ZeroGames. Todos los derechos reservados.
         </div>
     </footer>
+    <script src="assets/js/theme.js"></script>
 </body>
 </html>

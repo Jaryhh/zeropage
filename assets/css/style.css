@@ -406,3 +406,79 @@ img, .banner-img {
     width: 100%;
     box-sizing: border-box;
 }
+
+#theme-toggle {
+    position: fixed;
+    top: 1.2rem;
+    right: 2rem;
+    background: var(--bg-card);
+    color: var(--accent-white);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #0004;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s, color 0.3s;
+}
+#theme-toggle:hover {
+    background: var(--accent-white);
+    color: var(--bg-main);
+}
+
+/* Sección de equipo */
+.equipo-section {
+    margin-top: 2rem;
+}
+
+.equipo-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.equipo-card {
+    background: var(--bg-card);
+    border-radius: 14px;
+    padding: 1.2rem 2rem;
+    min-width: 220px;
+    max-width: 260px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: 
+        transform 0.3s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.3s cubic-bezier(.4,0,.2,1),
+        border-color 0.3s cubic-bezier(.4,0,.2,1),
+        background 0.3s cubic-bezier(.4,0,.2,1);
+    animation: fadeInUp 1s;
+}
+.equipo-card:hover {
+    transform: translateY(-10px) scale(1.04) rotate(-1deg);
+    box-shadow: 0 12px 36px #000c;
+    border-color: var(--accent-white);
+    background: #2a1e1b;
+}
+
+.equipo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.7rem;
+}
+
+.equipo-card h3 {
+    margin: 0 0 0.3rem 0;
+    color: var(--accent-white);
+}
+
+.equipo-card p {
+    color: var(--text-muted);
+    margin: 0;
+}
