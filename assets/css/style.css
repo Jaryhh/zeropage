@@ -1,13 +1,12 @@
 /* Tema oscuro azul moderno */
 :root {
-    --bg-main: #10182a;
-    --bg-header: #18213a;
-    --bg-card: #1c2942cc;
-    --bg-section: #16213e;
-    --accent-blue: #4fc3f7;
-    --accent-blue-dark: #1976d2;
-    --text-main: #eaf6ff;
-    --text-muted: #b0c4de;
+    --bg-main: #201715;
+    --bg-header: #2a1e1b;
+    --bg-card: #2e2321cc;
+    --bg-section: #251b19;
+    --accent-white: #edeceb;
+    --text-main: #edeceb;
+    --text-muted: #d6d3d2;
     --border-radius: 18px;
     --shadow: 0 4px 24px #000a;
     --transition: 0.3s cubic-bezier(.4,0,.2,1);
@@ -25,18 +24,12 @@ html, body {
 
 header {
     background: var(--bg-header);
-    color: #fff;
-    padding: 0;
+    color: var(--accent-white);
+    border-bottom: 1.5px solid #3a2925;
     position: sticky;
     top: 0;
     z-index: 10;
     box-shadow: 0 2px 16px #0004;
-    animation: fadeDown 1s;
-}
-
-@keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-30px);}
-    to { opacity: 1; transform: translateY(0);}
 }
 
 header .container {
@@ -55,21 +48,11 @@ header .container {
     border-radius: 12px;
     margin-right: 1rem;
     background: transparent;
-    box-shadow: 0 2px 8px #1976d222;
-    transition: box-shadow var(--transition), transform var(--transition);
+    box-shadow: none;
+    transition: transform var(--transition);
 }
 .logo-img:hover {
-    box-shadow: 0 4px 24px #4fc3f7aa;
     transform: scale(1.07) rotate(-3deg);
-}
-
-header h1 {
-    font-size: 2.1rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin: 0 1.5rem 0 0;
-    color: #fff;
-    text-shadow: 0 2px 8px #1976d244;
 }
 
 nav {
@@ -83,31 +66,11 @@ nav a {
     font-size: 1.1rem;
     padding: 0.4rem 1.1rem;
     border-radius: 8px;
-    transition: background var(--transition), color var(--transition), box-shadow var(--transition);
-    position: relative;
+    transition: background var(--transition), color var(--transition);
 }
 nav a:hover, nav a.active {
-    background: var(--accent-blue);
-    color: var(--bg-header);
-    box-shadow: 0 2px 12px #4fc3f7aa;
-}
-
-button#theme-toggle {
-    position: absolute;
-    top: 1.2rem;
-    right: 2rem;
-    background: var(--accent-blue);
-    border: none;
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    box-shadow: 0 2px 8px #1976d222;
-    transition: background var(--transition), box-shadow var(--transition);
-}
-button#theme-toggle:hover {
-    background: var(--accent-blue-dark);
-    box-shadow: 0 4px 16px #1976d244;
+    background: #3a2925;
+    color: var(--accent-white);
 }
 
 section {
@@ -117,34 +80,10 @@ section {
     margin: 2rem auto;
     max-width: 1200px;
     box-shadow: var(--shadow);
-    animation: fadeIn 1.2s;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0;}
-    to { opacity: 1;}
-}
-
-section.hero {
-    background: linear-gradient(135deg, #16213e 60%, #22335a 100%);
-    box-shadow: 0 8px 32px #0006;
-    border-radius: 0 0 32px 32px;
-    text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-}
-
-section h2 {
-    color: var(--accent-blue);
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    letter-spacing: 1px;
-}
-
-section h3 {
-    color: var(--accent-blue-dark);
-    margin-top: 1.5rem;
-    margin-bottom: 0.7rem;
+section h2, section h3 {
+    color: var(--accent-white);
 }
 
 .game-list {
@@ -166,22 +105,21 @@ section h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1.5px solid #22335a;
+    border: 1.5px solid #3a2925;
     cursor: pointer;
     text-align: center;
     text-decoration: none;
-    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
-    animation: fadeInUp 1s;
-}
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px);}
-    to { opacity: 1; transform: translateY(0);}
+    transition: 
+        transform 0.3s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.3s cubic-bezier(.4,0,.2,1),
+        border-color 0.3s cubic-bezier(.4,0,.2,1),
+        background 0.3s cubic-bezier(.4,0,.2,1);
 }
 .game-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow: 0 8px 32px #4fc3f799;
-    border-color: var(--accent-blue);
-    background: #22335a;
+    transform: translateY(-10px) scale(1.04) rotate(-1deg);
+    box-shadow: 0 12px 36px #000c;
+    border-color: var(--accent-white);
+    background: #2a1e1b;
 }
 
 .game-card img {
@@ -190,26 +128,18 @@ section h3 {
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 1rem;
-    box-shadow: 0 2px 12px #1976d222;
-    transition: box-shadow var(--transition);
-}
-.game-card:hover img {
-    box-shadow: 0 4px 24px #4fc3f7aa;
+    box-shadow: none;
 }
 
 footer {
     background: var(--bg-header);
     color: var(--text-muted);
     padding: 2rem 1rem 1rem 1rem;
-    border-top: 1.5px solid #22335a;
+    border-top: 1.5px solid #3a2925;
     margin-top: 2rem;
     border-radius: 32px 32px 0 0;
     box-shadow: 0 -2px 16px #0006;
-    animation: fadeUp 1s;
-}
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px);}
-    to { opacity: 1; transform: translateY(0);}
+    text-align: center;
 }
 
 .footer-links {
@@ -229,16 +159,86 @@ footer {
     transition: background var(--transition), color var(--transition);
 }
 .footer-links a:hover {
-    background: var(--accent-blue);
-    color: var(--bg-header);
+    background: #3a2925;
+    color: var(--accent-white);
 }
 
 .footer-credits {
-    color: #b0c4de;
+    color: #d6d3d2;
     font-size: 0.95rem;
     margin-top: 1rem;
     text-align: center;
     width: 100%;
+}
+
+/* Centrado de secciones */
+.about, .games, .news, .contact {
+    text-align: center;
+}
+
+.about {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.news-container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Banner estilo YouTube */
+.banner-youtube {
+    width: 100%;
+    height: 400px;
+    background: #201715;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Animaciones globales y suaves para todas las páginas */
+
+/* Animación de entrada para secciones */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+section, .banner-youtube, header, footer {
+    animation: fadeInUp 0.9s cubic-bezier(.4,0,.2,1);
+}
+
+/* Animación de hover para botones y enlaces */
+a, .btn, button {
+    transition: 
+        background 0.3s cubic-bezier(.4,0,.2,1),
+        color 0.3s cubic-bezier(.4,0,.2,1),
+        box-shadow 0.3s cubic-bezier(.4,0,.2,1),
+        transform 0.2s cubic-bezier(.4,0,.2,1);
+}
+a:hover, .btn:hover, button:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 16px #edeceb33;
+}
+
+/* Animación de entrada para imágenes */
+img, .banner-img {
+    animation: fadeInImg 1.2s;
+}
+@keyframes fadeInImg {
+    from { opacity: 0; filter: blur(8px);}
+    to { opacity: 1; filter: blur(0);}
 }
 
 /* Responsive */
@@ -262,43 +262,5 @@ footer {
     .logo-img {
         height: 40px;
         width: 40px;
-    }
-    header h1 {
-        font-size: 1.8rem;
-    }
-    .slogan {
-        font-size: 1rem;
-    }
-    .main-nav a, nav a {
-        font-size: 1rem;
-        padding: 0.3rem 0.8rem;
-    }
-    button#theme-toggle {
-        width: 32px;
-        height: 32px;
-        top: 1rem;
-        right: 1.5rem;
-    }
-    .hero-media img, .hero-media video {
-        max-width: 90%;
-    }
-    section {
-        padding: 2rem 1rem;
-    }
-    .game-card {
-        width: 100%;
-        max-width: none;
-    }
-    .press-assets img {
-        width: 70px;
-        height: 70px;
-    }
-    .footer-links, .footer-social {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-links a, .footer-social a {
-        font-size: 0.9rem;
-        padding: 0.2rem 0.6rem;
     }
 }
